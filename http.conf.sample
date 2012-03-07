@@ -1,0 +1,10 @@
+#Perl Scripts
+PerlModule Nanders::Auth
+Alias /perl/ /usr/local/www/apache22/data/perl/
+<Location /perl/>
+    PerlAccessHandler Nanders::Auth 
+    SetHandler perl-script
+    PerlResponseHandler ModPerl::Registry
+    PerlOptions +ParseHeaders
+    Options +ExecCGI
+</Location>
